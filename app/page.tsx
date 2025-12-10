@@ -10,7 +10,7 @@ import Script from "next/script"
 import { useState, useRef } from "react"
 import Image from "next/image"
 import { LanguageSwitcherNew } from "@/components/language-switcher-new"
-import { DJHansTikTok } from "@/components/dj-hans-tiktok"
+import { DJHansYouTube } from "@/components/dj-hans-youtube"
 import { VisitorCounter } from "@/components/visitor-counter"
 
 const themes = {
@@ -346,26 +346,30 @@ export default function Home() {
 
             {/* Music Video */}
             <section className="space-y-6">
-              <h2 className={`text-3xl font-bold ${theme.heading}`}>AI Music Videos</h2>
-              <div className={`aspect-video rounded-lg overflow-hidden ${theme.tagBg} relative`}>
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/UYZQv0BpBfk?si=wRai-_bVIhIN9V_N&autoplay=1&mute=0"
-                  title="Music Video"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-              <p className={`text-sm ${theme.muted} text-center`}>Hans17 x LLM x VAM x Mocap x Club Music</p>
+              <h2 className={`text-3xl font-bold ${theme.heading}`}>Live DJ Stream (Every Tuesday, 8pm)</h2>
+              <a href="https://www.youtube.com/@hans17kor" target="_blank" rel="noopener noreferrer" className="block">
+                <div
+                  className={`aspect-video rounded-lg overflow-hidden ${theme.tagBg} relative cursor-pointer hover:opacity-90 transition-opacity`}
+                >
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/u1yxK6YXM84?si=HmXS3o_twXHkb12I"
+                    title="Live DJ Stream"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </a>
+              <p className={`text-sm ${theme.muted} text-center`}>Have A Nice Symphony17 (Hans17)</p>
             </section>
 
             {/* DJ Hans17 */}
             <div className="space-y-4">
               <h3 className={`text-2xl font-bold ${theme.heading}`}>DJ Hans17</h3>
               <div className="rounded-lg overflow-hidden">
-                <DJHansTikTok />
+                <DJHansYouTube />
               </div>
             </div>
 
