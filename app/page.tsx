@@ -11,7 +11,6 @@ import { useState, useRef } from "react"
 import Image from "next/image"
 import { LanguageSwitcherNew } from "@/components/language-switcher-new"
 import { DJHansYouTube } from "@/components/dj-hans-youtube"
-import { VisitorCounter } from "@/components/visitor-counter"
 
 const themes = {
   white: {
@@ -571,14 +570,10 @@ export default function Home() {
       {/* Fixed Follow me section at bottom */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-gradient-to-t from-black/80 via-black/70 to-transparent backdrop-blur-sm py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
-            <div className="flex-1" />
+          <div className="flex items-center justify-center">
             <div className="flex flex-col items-center gap-3 scale-[0.84] origin-bottom">
               <h3 className={`text-sm font-semibold ${theme.muted} uppercase tracking-wider`}>{t.followMe}</h3>
               <SocialLinks />
-            </div>
-            <div className="flex-1 flex justify-end items-center pr-4">
-              <VisitorCounter />
             </div>
           </div>
         </div>
